@@ -63,7 +63,7 @@ window.addEventListener("keydown", function(e){
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const keys = document.querySelector(`.key[data-key="${e.keyCode}"]`);
   audio.play();
-  if (!audio) return;
+  if (!audio) return; // If no audio is found, it stops the function to prevent errors and unnecessary code execution.
   audio.currentTime = 0; //allow frequent pressing of key and play audio
 
   keys.classList.add("playing"); // add transition to buttons
